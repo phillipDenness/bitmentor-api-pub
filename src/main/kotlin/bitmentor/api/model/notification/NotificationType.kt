@@ -1,0 +1,16 @@
+package bitmentor.api.model.notification
+
+enum class NotificationType {
+    MESSAGE,
+    COMPLETE_ACCOUNT,
+    COMPLETE_TUTOR,
+    PUBLIC_TUTOR,
+    REVIEW_RECEIVED,
+    LESSON_CREATED,
+    LESSON_CONFIRMED,
+    LESSON_REJECTED,
+    LESSON_CANCELLED,
+    LESSON_COMPLETE_STUDENT,
+    LESSON_COMPLETE_TUTOR,
+    LESSON_UPCOMING
+}

@@ -1,0 +1,30 @@
+Configuration:
+  properties:
+    property:
+      name: filename
+      value: /var/log/java/test-yaml.log
+  appenders:
+    Console:
+      name: STDOUT
+      JSONLayout:
+        complete: false
+        compact: true
+        eventEol: true
+        properties: true
+    File:
+      name: FileAppender
+      fileName: ${filename}
+      JSONLayout:
+        complete: false
+        compact: true
+        eventEol: true
+        properties: true
+        KeyValuePair:
+          key: "@timestamp"
+          value: "$${date:yyyy-MM-dd'T'HH:mm:ss.SSSZ}"
+  Loggers:
+    Root:
+      level: info
+      AppenderRef:
+        - ref: FileAppender
+        - ref: STDOUT
